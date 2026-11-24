@@ -1,0 +1,13 @@
+# Служебные файлы ОС
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Редакторы
+*.swp
+.idea/
+.vscode/
+
+# Временные файлы локального сервера
+*.log
+.video_agent/
