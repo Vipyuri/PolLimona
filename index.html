@@ -53,6 +53,57 @@
 </head>
 <body>
 
+  <!-- Набор рисованных иконок в стиле логотипа -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-lemon" viewBox="0 0 24 24">
+      <circle cx="12" cy="13.2" r="8.3"/>
+      <circle cx="12" cy="13.2" r="5.4"/>
+      <path d="M12 7.8v10.8M7.3 10.5l9.4 5.4M7.3 15.9l9.4-5.4"/>
+      <path d="M12.4 4.9c.2-1.6 1.4-2.7 3.3-2.9"/>
+    </symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="16.3" rx="4.7" ry="3.9"/>
+      <ellipse cx="5.1" cy="11.2" rx="1.9" ry="2.5" transform="rotate(-22 5.1 11.2)"/>
+      <ellipse cx="18.9" cy="11.2" rx="1.9" ry="2.5" transform="rotate(22 18.9 11.2)"/>
+      <ellipse cx="9" cy="5.9" rx="1.9" ry="2.5" transform="rotate(-8 9 5.9)"/>
+      <ellipse cx="15" cy="5.9" rx="1.9" ry="2.5" transform="rotate(8 15 5.9)"/>
+    </symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24">
+      <path d="M12 21v-9.5"/>
+      <path d="M12 15.5C7.8 15.5 5.4 13 5.4 8.7c4.2 0 6.6 2.6 6.6 6.8z"/>
+      <path d="M12 12.2c0-4.2 2.3-6.5 6.6-6.7 0 4.2-2.4 6.7-6.6 6.7z"/>
+    </symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24">
+      <path d="M4.5 9.5h12V14a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z"/>
+      <path d="M16.5 11h1.3a2.6 2.6 0 0 1 0 5.2h-1.3"/>
+      <path d="M10.5 6.5c0-1.3 1.2-1.6 1.2-2.9M14 6.5c0-1.3 1.2-1.6 1.2-2.9"/>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24">
+      <path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z"/>
+    </symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24">
+      <path d="M7.5 4h9v4.5a4.5 4.5 0 0 1-9 0z"/>
+      <path d="M7.5 5.5H4.8a2.8 2.8 0 0 0 2.9 3.6M16.5 5.5h2.7a2.8 2.8 0 0 1-2.9 3.6"/>
+      <path d="M12 13v3.5M8.5 20h7M10 16.5h4"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M12 21.5s7-6.1 7-11.5a7 7 0 1 0-14 0c0 5.4 7 11.5 7 11.5z"/>
+      <circle cx="12" cy="10" r="2.6"/>
+    </symbol>
+    <symbol id="i-x" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="i-left" viewBox="0 0 24 24">
+      <path d="M14.5 5.5 8 12l6.5 6.5"/>
+    </symbol>
+    <symbol id="i-right" viewBox="0 0 24 24">
+      <path d="M9.5 5.5 16 12l-6.5 6.5"/>
+    </symbol>
+  </svg>
+
   <!-- ======================= ШАПКА ======================= -->
   <header class="header" id="header">
     <div class="container header__inner">
@@ -97,7 +148,7 @@
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__content">
-          <span class="eyebrow">домашняя кофейня в Санкт-Петербурге</span>
+          <span class="eyebrow">домашняя кофейня в <span class="nobr">Санкт-Петербурге</span></span>
           <h1 class="hero__title">Тепло на&nbsp;пол­чашки&nbsp;<em>и лимона</em></h1>
           <p class="hero__lead">
             Мы — небольшая семейная кофейня у&nbsp;входа в&nbsp;парк Екатерингоф.
@@ -119,16 +170,16 @@
               <svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="34" rx="25" ry="25" fill="none" stroke="currentColor" stroke-width="4"/><g stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M32 10v48"/><path d="M11 22l42 24"/><path d="M11 46l42-24"/></g></svg>
               dog&nbsp;friendly
             </span>
-            <span class="chip">☕ кофе с&nbsp;собой</span>
+            <span class="chip"><svg class="icon" aria-hidden="true"><use href="#i-cup"/></svg>кофе с&nbsp;собой</span>
           </div>
 
-          <p class="hero__note">— здесь пахнет выпечкой и&nbsp;лимонами&nbsp;🍋</p>
+          <p class="hero__note">— здесь пахнет выпечкой и&nbsp;лимонами <svg class="icon" aria-hidden="true"><use href="#i-lemon"/></svg></p>
         </div>
 
         <div class="hero__visual">
           <div class="hero__photo arch">
             <img src="img/photos/interior-window.jpg" alt="Уютный зал кофейни «Пол-лимона»: тёплый свет, живые растения и гирлянды" width="1024" height="1536" loading="eager">
-            <span class="sticker sticker--award">🏆 Хорошее место ’26</span>
+            <span class="sticker sticker--award"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg>Хорошее место ’26</span>
           </div>
           <svg class="hero__lemon hero__lemon--1" viewBox="0 0 64 64" aria-hidden="true">
             <circle cx="32" cy="34" r="25" fill="#F8E4A0" stroke="#B9934E" stroke-width="2.6"/>
@@ -157,18 +208,48 @@
     <!-- ======================= БЕГУЩАЯ СТРОКА ======================= -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>десерты печём сами каждый день</span><i>🍋</i>
-        <span>можно с собакой</span><i>🐾</i>
-        <span>у парка Екатерингоф</span><i>🌳</i>
-        <span>5 минут от м. «Нарвская»</span><i>☕</i>
-        <span>лимонный эклер — попробуйте</span><i>🍋</i>
-        <span>живые растения и гирлянды</span><i>✨</i>
-        <span>десерты печём сами каждый день</span><i>🍋</i>
-        <span>можно с собакой</span><i>🐾</i>
-        <span>у парка Екатерингоф</span><i>🌳</i>
-        <span>5 минут от м. «Нарвская»</span><i>☕</i>
-        <span>лимонный эклер — попробуйте</span><i>🍋</i>
-        <span>живые растения и гирлянды</span><i>✨</i>
+        <div class="marquee__group">
+          <span>десерты готовим прямо на месте</span>
+          <svg class="icon"><use href="#i-lemon"/></svg>
+          <span>можно с собакой</span>
+          <svg class="icon"><use href="#i-paw"/></svg>
+          <span>у парка Екатерингоф</span>
+          <svg class="icon"><use href="#i-sprout"/></svg>
+          <span>5 минут от м. «Нарвская»</span>
+          <svg class="icon"><use href="#i-cup"/></svg>
+          <span>лимонный эклер — попробуйте</span>
+          <svg class="icon"><use href="#i-lemon"/></svg>
+          <span>живые растения и гирлянды</span>
+          <svg class="icon"><use href="#i-spark"/></svg>
+        </div>
+        <div class="marquee__group">
+          <span>десерты готовим прямо на месте</span>
+          <svg class="icon"><use href="#i-lemon"/></svg>
+          <span>можно с собакой</span>
+          <svg class="icon"><use href="#i-paw"/></svg>
+          <span>у парка Екатерингоф</span>
+          <svg class="icon"><use href="#i-sprout"/></svg>
+          <span>5 минут от м. «Нарвская»</span>
+          <svg class="icon"><use href="#i-cup"/></svg>
+          <span>лимонный эклер — попробуйте</span>
+          <svg class="icon"><use href="#i-lemon"/></svg>
+          <span>живые растения и гирлянды</span>
+          <svg class="icon"><use href="#i-spark"/></svg>
+        </div>
+        <div class="marquee__group">
+          <span>десерты готовим прямо на месте</span>
+          <svg class="icon"><use href="#i-lemon"/></svg>
+          <span>можно с собакой</span>
+          <svg class="icon"><use href="#i-paw"/></svg>
+          <span>у парка Екатерингоф</span>
+          <svg class="icon"><use href="#i-sprout"/></svg>
+          <span>5 минут от м. «Нарвская»</span>
+          <svg class="icon"><use href="#i-cup"/></svg>
+          <span>лимонный эклер — попробуйте</span>
+          <svg class="icon"><use href="#i-lemon"/></svg>
+          <span>живые растения и гирлянды</span>
+          <svg class="icon"><use href="#i-spark"/></svg>
+        </div>
       </div>
     </div>
 
@@ -177,7 +258,7 @@
       <div class="container">
         <header class="section__head">
           <span class="eyebrow">наша история</span>
-          <h2 class="section__title">Уют, который чувствуешь&nbsp;с&nbsp;порога</h2>
+          <h2 class="section__title">Уют, который чувствуешь с&nbsp;порога</h2>
         </header>
 
         <div class="about__grid">
@@ -185,17 +266,17 @@
             <p>
               «Пол-лимона» — семейная кофейня-кондитерская на&nbsp;Перекопской улице,
               в&nbsp;двух шагах от&nbsp;входа в&nbsp;Екатерингофский парк. Всё здесь сделано
-              руками нашей семьи: десерты печём сами каждое утро, кофе варим
+              руками нашей семьи: десерты готовим прямо на&nbsp;месте, кофе варим
               с&nbsp;заботой, а&nbsp;живые растения и&nbsp;тёплые гирлянды дают тот самый
-              мягкий свет, за&nbsp;который нас любят.
+              мягкий свет.
             </p>
             <p>
-              Екатерингоф — один из&nbsp;самых тихих и&nbsp;зелёных парков Петербурга,
+              Екатерингоф — тихий и&nbsp;зелёный парк,
               и&nbsp;мы счастливы быть его «тёплым уголком»: заходите после прогулки
               с&nbsp;книгой, с&nbsp;другом или&nbsp;с&nbsp;собакой — у&nbsp;нас найдётся чашка
               для&nbsp;каждого.
             </p>
-            <p class="about__sign">— семья «Пол-лимона»&nbsp;🍋</p>
+            <p class="about__sign">— семья «Пол-лимона» <svg class="icon" aria-hidden="true"><use href="#i-lemon"/></svg></p>
           </div>
 
           <div class="about__cards">
@@ -224,7 +305,7 @@
                 </g>
               </svg>
               <h3>Dog friendly</h3>
-              <p>Хвостатым гостям — поилки, угощения и&nbsp;почесать за&nbsp;ушком. По&nbsp;данным Яндекс&nbsp;Карт, к&nbsp;нам можно даже «с&nbsp;любыми животными».</p>
+              <p>К&nbsp;нам можно с&nbsp;собакой: Яндекс&nbsp;Карты отмечают, что у&nbsp;нас рады даже «любым животным». Заходите после прогулки по&nbsp;парку.</p>
             </article>
 
             <article class="card">
@@ -372,7 +453,7 @@
                 <div class="menu-item__head">
                   <span class="menu-item__name">Круассаны и&nbsp;сезонная выпечка</span><span class="menu-item__dots"></span><span class="menu-item__price">от 150&nbsp;₽</span>
                 </div>
-                <p class="menu-item__desc">круассаны, синнабоны и сезонные истории — клубничный летний круассан у нас уже легендарный</p>
+                <p class="menu-item__desc">летний клубничный круассан гости особенно хвалят</p>
               </li>
             </ul>
           </div>
@@ -393,15 +474,14 @@
           <span class="eyebrow eyebrow--light">dog friendly</span>
           <h2 class="section__title section__title--light">Собаки — наши постоянные гости</h2>
           <p>
-            Екатерингофский парк обожают все собаки округа — и&nbsp;после прогулки
-            многие заглядывают к&nbsp;нам. Мы считаем, что лучший компаньон
+            Екатерингофский парк — отличное место для прогулки с&nbsp;собакой,
+            и&nbsp;после неё удобно заглянуть к&nbsp;нам. Мы считаем, что лучший компаньон
             к&nbsp;капучино — мокрый нос, поэтому хвостатым гостям всегда рады.
           </p>
           <ul class="dogs__list">
-            <li>🐾 поилки и&nbsp;угощения для хвостатых</li>
-            <li>🐕 можно с&nbsp;любыми животными — не&nbsp;только с&nbsp;собаками</li>
-            <li>🌳 вход со&nbsp;стороны парка — удобно гулять маршрутам</li>
-            <li>📸 фото ваших питомцев — на&nbsp;стене у&nbsp;стойки</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-paw"/></svg>Можно с&nbsp;собакой — Яндекс&nbsp;Карты отмечают, что к&nbsp;нам пускают даже с&nbsp;любыми животными</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-cup"/></svg>Кофе и&nbsp;десерты навынос — удобно взять с&nbsp;собой на&nbsp;прогулку</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-sprout"/></svg>У&nbsp;входа в&nbsp;Екатерингофский парк — заходите по&nbsp;дороге</li>
           </ul>
           <a class="btn btn--lemon" href="#visit">Прогуляться до нас
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -480,7 +560,7 @@
           <span class="reviews__score">4,9</span>
           <span class="reviews__stars" aria-hidden="true">★★★★★</span>
           <span class="reviews__source">рейтинг на&nbsp;Яндекс&nbsp;Картах · 345&nbsp;оценок · 250&nbsp;отзывов</span>
-          <span class="reviews__award">🏆 награда «Хорошее место&nbsp;—&nbsp;2026»</span>
+          <span class="reviews__award"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg>награда «Хорошее место&nbsp;—&nbsp;2026»</span>
         </div>
 
         <div class="reviews__grid">
@@ -544,7 +624,7 @@
             <div class="visit__card">
               <h3>Контакты</h3>
               <p><a class="visit__phone" href="tel:+79932165705">+7 (993) 216-57-05</a></p>
-              <p class="visit__phone-note">звоните, если хотите забрать десерт с собой — отложим</p>
+              <p class="visit__phone-note">звоните, если хотите что-то уточнить перед визитом</p>
               <ul class="visit__socials">
                 <li><a href="https://vk.com/pollimonaspb" target="_blank" rel="noopener">ВКонтакте</a></li>
                 <li><a href="https://instagram.com/pol_limona.spb" target="_blank" rel="noopener">Instagram</a></li>
@@ -565,10 +645,9 @@
 
           <div class="visit__map">
             <iframe
-              src="https://yandex.ru/map-widget/v1/?oid=27024449023&ol=biz"
+              src="https://yandex.ru/map-widget/v1/?ll=30.270539%2C59.902343&amp;z=17&amp;ol=biz&amp;oid=27024449023"
               width="100%" height="100%" frameborder="0" allowfullscreen="true"
               title="Карта: кофейня «Пол-лимона», Перекопская улица 7" loading="lazy"></iframe>
-            <span class="visit__map-badge">📍 ищите лимонную вывеску у&nbsp;входа в&nbsp;парк</span>
           </div>
         </div>
       </div>
@@ -579,8 +658,8 @@
       <div class="container">
         <div class="cta__box">
           <span class="eyebrow eyebrow--light">до встречи</span>
-          <h2 class="cta__title">Загляните на&nbsp;чашечку — остальное&nbsp;мы&nbsp;сделаем сами</h2>
-          <p class="cta__text">Кофе сварим, десерт подберём, пса приласкаем. Просто приходите.</p>
+          <h2 class="cta__title">Загляните на&nbsp;чашечку — остальное мы сделаем сами</h2>
+          <p class="cta__text">Кофе сварим, десерт подберём, собаке тоже рады. Просто приходите.</p>
           <div class="hero__cta">
             <a class="btn btn--primary" href="#visit">Как нас найти</a>
             <a class="btn btn--ghost btn--ghost-light" href="tel:+79932165705">Позвонить нам</a>
@@ -600,7 +679,7 @@
           <circle cx="32" cy="34" r="18.5" fill="none" stroke="#D8B66B" stroke-width="1.4"/>
           <g stroke="#D8B66B" stroke-width="1.9" stroke-linecap="round"><path d="M32 15.5V52.5"/><path d="M14.2 25.5 49.8 42.5"/><path d="M14.2 42.5 49.8 25.5"/></g>
         </svg>
-        <span class="footer__name">Пол|лимона</span>
+        <span class="footer__name">Пол<i>|</i>лимона</span>
       </div>
 
       <div class="footer__cols">
@@ -625,20 +704,30 @@
       </div>
     </div>
     <div class="container footer__bottom">
-      <p>© <span id="year">2026</span> кофейня «Пол-лимона» · сделано с&nbsp;🍋 в&nbsp;Санкт-Петербурге</p>
+      <p>© <span id="year">2026</span> кофейня «Пол-лимона» · сделано с <svg class="icon" aria-hidden="true"><use href="#i-lemon"/></svg> в&nbsp;Санкт-Петербурге</p>
     </div>
   </footer>
 
   <!-- ======================= ЛАЙТБОКС ======================= -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
-    <button class="lightbox__close" type="button" aria-label="Закрыть">✕</button>
-    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Предыдущее фото">‹</button>
-    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Следующее фото">›</button>
+    <button class="lightbox__close" type="button" aria-label="Закрыть"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Предыдущее фото"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button>
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Следующее фото"><svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></button>
     <figure class="lightbox__figure">
       <img src="" alt="">
       <figcaption></figcaption>
     </figure>
   </div>
+
+  <!-- ======================= ПАНЕЛЬ «ПОЗВОНИТЬ / МАРШРУТ» (телефон) ======================= -->
+  <nav class="callbar" aria-label="Быстрая связь">
+    <a class="callbar__btn callbar__btn--call" href="tel:+79932165705">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить
+    </a>
+    <a class="callbar__btn callbar__btn--route" href="https://yandex.ru/maps/?rtext=~59.902343,30.270539&amp;rtt=auto" target="_blank" rel="noopener">
+      <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Маршрут
+    </a>
+  </nav>
 
   <script src="js/main.js"></script>
 </body>

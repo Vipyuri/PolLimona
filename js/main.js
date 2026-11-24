@@ -97,6 +97,8 @@
 
   let current = 0;
   let lastFocused = null;
+  let touchStartX = 0;
+  let touchStartY = 0;
 
   function render() {
     const slide = slides[current];
@@ -104,8 +106,6 @@
     lbImg.src = slide.src;
     lbImg.alt = slide.alt;
     lbCap.textContent = slide.cap;
-    current === 0 ? lbPrev.setAttribute('aria-disabled', 'true') : lbPrev.removeAttribute('aria-disabled');
-    current === slides.length - 1 ? lbNext.setAttribute('aria-disabled', 'true') : lbNext.removeAttribute('aria-disabled');
   }
 
   function openLightbox(index) {
@@ -149,4 +149,48 @@
     if (e.key === 'ArrowLeft') step(-1);
     if (e.key === 'ArrowRight') step(1);
   });
+
+  // листание свайпом: горизонтальное движение длиннее 48 px
+  lightbox.addEventListener('touchstart', (e) => {
+    if (e.touches.length !== 1) return;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', (e) => {
+    const touch = e.changedTouches[0];
+    if (!touch) return;
+    const dx = touch.clientX - touchStartX;
+    const dy = touch.clientY - touchStartY;
+    if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
+  }, { passive: true });
+
+  /* ---------- Панель «Позвонить / Маршрут» на телефоне ---------- */
+  const callbar = document.querySelector('.callbar');
+  const hero = document.querySelector('.hero');
+  const visit = document.getElementById('visit');
+
+  if (callbar && hero && visit) {
+    let queued = false;
+
+    // панель видна после первого экрана и прячется в блоке контактов
+    const updateCallbar = () => {
+      queued = false;
+      const vh = window.innerHeight;
+      const pastHero = hero.getBoundingClientRect().bottom < vh * 0.55;
+      const beforeContacts = visit.getBoundingClientRect().top > vh * 0.8;
+      callbar.classList.toggle('is-visible', pastHero && beforeContacts);
+    };
+
+    const queueCallbarUpdate = () => {
+      if (queued) return;
+      queued = true;
+      window.requestAnimationFrame(updateCallbar);
+    };
+
+    window.addEventListener('scroll', queueCallbarUpdate, { passive: true });
+    window.addEventListener('resize', queueCallbarUpdate);
+    window.addEventListener('load', queueCallbarUpdate);
+    queueCallbarUpdate();
+  }
 })();
